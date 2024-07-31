@@ -7,6 +7,8 @@
     <title>Уличные</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="modal/css/style.css">
+    <link rel="stylesheet" href="modal/css/normalize.css">
 </head>
 
 <body>
@@ -117,7 +119,7 @@
                     <option value="Ш160x115°">Ш160x115°</option>
                 </select>
                 <div id="kss-details" class="kss-details"></div>
-                <a href="index.html #orders" class="wrapper__desc-btn">Заказать</a>
+                <button class="wrapper__desc-btn">Заказать</button>
             </div>
             <h1 class="title" id="moreDesc">Характеристики светильника</h1>
             <div class="characteristics">
@@ -183,6 +185,26 @@
                     Безотказный (ИПС) с гальванической изоляцией, защита от КЗ и ХХ (Россия)
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal" id="my-modal">
+        <div class="modal__box">
+            <button class="modal__close-btn" id="close-my-modal-btn">
+                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                        fill="#333333" />
+                    <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                </svg>
+            </button>
+            <h2>Оформление</h2>
+    
+            <form action="#!" class="form">
+                <input type="text" placeholder="Имя" id="name" class="form__input" required>
+                <input type="tel" id="message" name="message" class="form__number" placeholder="(XX) XXX-XX-XX" required>
+                <button class="form__btn" onclick="sendMail()">Отправить</button>
+            </form>
+            
         </div>
     </div>
 
