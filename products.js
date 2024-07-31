@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             select.querySelector('.select-selected').classList.remove('select-arrow-active');
 
             // Обновляем текст в элементе model-details
-            document.getElementById('model-details').textContent = `Вы выбрали модель: ${selectedValue}`;
+            document.getElementById('model-details').textContent = `Вы выбрали тип: ${selectedValue}`;
         });
     });
 
