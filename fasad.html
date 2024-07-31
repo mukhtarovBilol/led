@@ -6,6 +6,7 @@
     <title>Фасадные</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="modal/css/style.css">
 </head>
 
 <body>
@@ -72,86 +73,147 @@
                 </div>
             </div>
             <div class="wrapper__desc">
-                <h1>Фасадные светодиодные светильники. </h1>
+                <h1>Уличные светодиодные светильники. </h1>
                 <br>
-                <p><strong>Тип модели: </strong>DK-LF-1-42, DK-LF-1-58, DK-LF-1-84,<br> DK-LF-2-58,  DK-LF-2-84,  DK-LF-2-130 
-                    <br><br>
-                <p><strong>Виды креплений:</strong> <br> <br>
-                    - РЕГУЛИРУЕМЫЙ КРОНШТЕЙН<br>
-                    - КОНСОЛЬ НА ТРУБУ ДО 57 ММ <br>
-                    - УНИВЕРСАЛЬНЫЙ<br>
-                    - ПОД ЗАКАЗ (ПО ЧЕРТЕЖУ) <br>
-                </p>
-                <a href="#moreDesc" class="wrapper__desc-link"><strong>Больше описание...</strong></a>
-                <p class="wrapper__desc-txt"><strong>Типы КСС:</strong> Д120°; Г15°, Г30°, Г60°, Г90°,  Ш148х58°,Ш156х59°, Ш160х115° (на выбор).<br></p>
-                </p>
-                <a href="index.html #orders" class="wrapper__desc-btn">Заказать</a>
+                <label for="model-select" class="select-label">Выберите модель:</label>
+                <div class="custom-select">
+                    <div class="select-selected">Выберите модель</div>
+                    <div class="select-items select-hide">
+                        <div data-value="DK-LF-1-42 ">DK-LF-1-42 </div>
+                        <div data-value="DK-LF-1-58  ">DK-LF-1-58  </div>
+                        <div data-value="DK-LF-1-84   ">DK-LF-1-84   </div>
+                        <div data-value="DK-LF-2-58  ">DK-LF-2-58  </div>
+                        <div data-value="DK-LF-2-84 ">DK-LF-2-84 </div>
+                        <div data-value="DK-LF-2-130 ">DK-LF-2-130 </div>
+                    </div>
+                    <select id="model-select" class="select-dropdown" style="display:none;">
+                        <option value="DK-LF-1-42">DK-LF-1-42</option>
+                        <option value="DK-LF-1-58">DK-LF-1-58</option>
+                        <option value="DK-LF-1-84">DK-LF-1-84</option>
+                        <option value="DK-LF-2-58 ">DK-LF-2-58 </option>
+                        <option value="DK-LF-2-84">DK-LF-2-84</option>
+                        <option value="DK-LF-2-130 ">DK-LF-2-130 </option>
+                    </select>
+                    <div id="model-details" class="model-details"></div>
+                </div>
+                <br><br>
+                <div class="custom-select">
+                    <label for="mount-select" class="select-label">Выберите вид крепления:</label>
+                    <select id="mount-select" class="select-dropdown">
+                        <option value="Регулируемый кронштейн" class="select-dropdown-option">РЕГУЛИРУЕМЫЙ КРОНШТЕЙН</option>
+                        <option value="Консоль на трубу до 57 мм" class="select-dropdown-option">КОНСОЛЬ НА ТРУБУ ДО 57 ММ</option>
+                        <option value="Универсальный" class="select-dropdown-option">УНИВЕРСАЛЬНЫЙ</option>
+                        <option value="Под заказ (по чертежу)" class="select-dropdown-option">ПОД ЗАКАЗ (ПО ЧЕРТЕЖУ)</option>
+                    </select>
+                    <div id="mount-details" class="mount-details"></div>
+                </div>
+                <br><br>
+                <div class="custom-select">
+                    <label for="kss-select" class="select-label">Выберите тип КСС:</label>
+                    <select id="kss-select" class="select-dropdown">
+                        <option value="К12°">Д120°</option>
+                        <option value="К15°">Г 15°</option>
+                        <option value="K25°">Г 30°</option>
+                        <option value="Г60°">Г 60°</option>
+                        <option value="Г90°">Г 90°</option>
+                        <option value="Д110°">Ш135х55°</option>
+                        <option value="Д120°">Ш148х58°</option>
+                        <option value="М150°">Ш160х115°</option>
+                    </select>
+                    <div id="kss-details" class="kss-details"></div>
+                </div>
+                <button class="wrapper__desc-btn">Заказать</button>
             </div>
-            <p class="wrapper__txt" id="moreDesc">
-                <strong>Потребление светодиодов:</strong> 54 Вт
-                <br>
-                <br>
-                <strong>Потребление светильника:</strong> 58 Вт
-                <br>
-                <br>
-                <strong>Светоотдача светодиодов:</strong> 161 Лм на 1 Вт
-                <br>
-                <br>
-                <strong>Светоотдача светильника:</strong> 141 Лм на 1 Вт
-                <br>
-                <br>
-                <strong>Количество модулей:</strong> 1 штук
-                <br>
-                <br>
-                <strong>Количество светодиодов:</strong> 12 штук
-                <br>
-                <br>
-                <strong>Размер модуля:</strong> 145 мм х 43 мм
-                <br>
-                <br>
-                <strong>Цветовая температура:</strong> 3000K, 4000K, 5000К (на выбор)
-                <br>
-                <br>
-                <strong>Световой поток светодиодов:</strong> 8700 Лм
-                <br>
-                <br>
-                <strong>Световой поток с учетом потерь на оптике:</strong> 8160 Лм
-                <br>
-                <br>
-                <strong>Габаритные размеры без подвесов:</strong> 335х103х55 мм
-                <br>
-                <br>
-                <strong>Масса:</strong> 2.2 кг
-                <br>
-                <br>
-                <strong>Диапазон напряжений питания АС, В:</strong> 176…264 В
-                <br>
-                <br>
-                <strong>Диапазон предельных напряжений питания АС, В:</strong> 158-290 В
-                <br>
-                <br>
-                <strong>Частота питания:</strong> 47-63 ГЦ
-                <br>
-                <br>
-                <strong>Температура эксплуатации:</strong> ОТ -50°C ДО +50°C
-                <br>
-                <br>
-                <strong>Коэффициент мощности:</strong> 0,97
-                <br>
-                <br>
-                <strong>КПД драйвера:</strong> 92%
-                <br>
-                <br>
-                <strong>Материал корпуса:</strong> экструдированный алюминий с большой удельной площадью рассеивания тепла
-                <br>
-                <br>
-                Безотказный (ИПС) с гальванической изоляцией, защита от КЗ и ХХ (Россия)
-            </p>
+            <h1 class="title" id="moreDesc">Характеристики светильника</h1>
+            <div class="characteristics">
+                <div class="characteristic">
+                    <strong>Потребление светодиодов:</strong> 37 Вт
+                </div>
+                <div class="characteristic">
+                    <strong>Потребление светильника:</strong> 42  Вт
+                </div>
+                <div class="characteristic">
+                    <strong>Светоотдача светодиодов:</strong> 164.8 Лм на 1 Вт
+                </div>
+                <div class="characteristic">
+                    <strong>Светоотдача светильника:</strong> 133.5 Лм на 1 Вт
+                </div>
+                <div class="characteristic">
+                    <strong>Количество модулей:</strong> 1 штук
+                </div>
+                <div class="characteristic">
+                    <strong>Количество светодиодов:</strong> 12 штук
+                </div>
+                <div class="characteristic">
+                    <strong>Размер модуля:</strong> 145 мм х 43 мм
+                </div>
+                <div class="characteristic">
+                    <strong>Цветовая температура:</strong> 3000K, 4000K, 5000К (на выбор)
+                </div>
+                <div class="characteristic">
+                    <strong>Световой поток светодиодов:</strong> 6 230 Лм
+                </div>
+                <div class="characteristic">
+                    <strong>Световой поток с учетом потерь на оптике:</strong> 5 605 Лм
+                </div>
+                <div class="characteristic">
+                    <strong>Габаритные размеры без подвесов:</strong> 225х103х55 мм
+                </div>
+                <div class="characteristic">
+                    <strong>Масса:</strong> 1.6 кг
+                </div>
+                <div class="characteristic">
+                    <strong>Диапазон напряжений питания АС, В:</strong> 176…264 В
+                </div>
+                <div class="characteristic">
+                    <strong>Диапазон предельных напряжений питания АС, В:</strong> 158-290 В
+                </div>
+                <div class="characteristic">
+                    <strong>Частота питания:</strong> 47-63 Гц
+                </div>
+                <div class="characteristic">
+                    <strong>Температура эксплуатации:</strong> ОТ -50°C ДО +50°C
+                </div>
+                <div class="characteristic">
+                    <strong>Коэффициент мощности:</strong> 0,97
+                </div>
+                <div class="characteristic">
+                    <strong>КПД драйвера:</strong> 92%
+                </div>
+                <div class="characteristic">
+                    <strong>Материал корпуса:</strong> экструдированный алюминий с большой удельной площадью рассеивания
+                    тепла
+                </div>
+                <div class="characteristic">
+                    Безотказный (ИПС) с гальванической изоляцией, защита от КЗ и ХХ (Россия)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="my-modal">
+        <div class="modal__box">
+            <button class="modal__close-btn" id="close-my-modal-btn">
+                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                        fill="#333333" />
+                    <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                </svg>
+            </button>
+            <h2>Оформление</h2>
+
+            <form action="#!" class="form">
+                <input type="text" placeholder="Имя" id="name" class="form__input" required>
+                <input type="tel" id="message" name="message" class="form__number" placeholder="Номер телефона: +X"
+                    required>
+                <button class="form__btn" onclick="sendMail()">Отправить</button>
+            </form>
+
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     <script src="products.js"></script>
 </body>
 

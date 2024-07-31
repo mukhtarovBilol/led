@@ -17,10 +17,41 @@ var swiperMain = new Swiper('.mySwiper2', {
     },
 });
 
-document.getElementById('model-select').addEventListener('change', function() {
-    const selectedModel = this.value;
-    const modelDetails = document.getElementById('model-details');
-    modelDetails.textContent = `Вы выбрали модель: ${selectedModel}`;
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработка клика на элемент кастомного селекта
+    document.querySelector('.custom-select').addEventListener('click', function() {
+        this.querySelector('.select-items').classList.toggle('select-hide');
+        this.querySelector('.select-selected').classList.toggle('select-arrow-active');
+    });
+
+    // Обработка клика на элемент внутри кастомного селекта
+    document.querySelectorAll('.custom-select .select-items div').forEach(function(item) {
+        item.addEventListener('click', function() {
+            const select = this.closest('.custom-select');
+            const selectedValue = this.getAttribute('data-value');
+            const selectedText = this.textContent;
+
+            // Обновляем текст выбранной модели в кастомном селекте
+            select.querySelector('.select-selected').textContent = selectedText;
+            select.querySelector('.select-items').classList.add('select-hide');
+            select.querySelector('.select-selected').classList.remove('select-arrow-active');
+
+            // Обновляем текст в элементе model-details
+            document.getElementById('model-details').textContent = `Вы выбрали модель: ${selectedValue}`;
+        });
+    });
+
+    // Закрытие кастомного селекта, если клик происходит вне его
+    document.addEventListener('click', function(e) {
+        if (!e.target.matches('.select-selected')) {
+            document.querySelectorAll('.select-items').forEach(function(item) {
+                item.classList.add('select-hide');
+            });
+            document.querySelectorAll('.select-selected').forEach(function(item) {
+                item.classList.remove('select-arrow-active');
+            });
+        }
+    });
 });
 
 document.getElementById('mount-select').addEventListener('change', function() {

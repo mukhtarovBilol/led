@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Отправка данных на почту
     $to = "mukhtarovbilol@gmail.com";
     $subject = "Новая заявка от $name";
-    $message = "Email: $gmail\nИмя: $name\nТелефон: $phone";
+    $message = "Имя: $name\nТелефон: $phone";
     
     if (mail($to, $subject, $message)) {
         echo "Данные успешно отправлены";

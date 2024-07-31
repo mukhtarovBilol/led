@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="modal/css/style.css">
-    <link rel="stylesheet" href="modal/css/normalize.css">
 </head>
 
 <body>
@@ -84,41 +83,165 @@
                 <h1>Уличные светодиодные светильники. </h1>
                 <br>
                 <label for="model-select" class="select-label">Выберите модель:</label>
-                <select id="model-select" class="select-dropdown">
-                    <option value="DK-LS-1-58">DK-LS-1-58</option>
-                    <option value="DK-LS-1-58-DALI-2">DK-LS-1-58-DALI-2</option>
-                    <option value="DK-LS-1-58-А">DK-LS-1-58-А</option>
-                    <option value="DK-LS-1-58-DALI-2-А">DK-LS-1-58-DALI-2-А</option>
-                </select>
-                <div id="model-details" class="model-details"></div>
+                <div class="custom-select">
+                    <div class="select-selected">Выберите модель</div>
+                    <div class="select-items select-hide">
+                        <div data-value="DK-LS-1-58">DK-LS-1-58</div>
+                        <div data-value="DK-LS-1-58-DALI-2">DK-LS-1-58-DALI-2</div>
+                        <div data-value="DK-LS-1-58-А">DK-LS-1-58-А</div>
+                        <div data-value="DK-LS-1-58-DALI-2-А">DK-LS-1-58-DALI-2-А</div>
+                        <div data-value="DK-LS-1-42">DK-LS-1-42</div>
+                        <div data-value="DK-LS-1-42-DALI-2">DK-LS-1-42-DALI-2</div>
+                        <div data-value="DK-LS-1-42-А">DK-LS-1-42-А</div>
+                        <div data-value="DK-LS-1-42-DALI-2-А">DK-LS-1-42-DALI-2-А</div>
+                        <div data-value="DK-LS-1-65">DK-LS-1-65</div>
+                        <div data-value="DK-LS-1-65-DALI-2">DK-LS-1-65-DALI-2</div>
+                        <div data-value="DK-LS-1-65-А">DK-LS-1-65-А</div>
+                        <div data-value="DK-LS-1-65-DALI-2-А">DK-LS-1-65-DALI-2-А</div>
+                        <div data-value="DK-LS-1-84">DK-LS-1-84</div>
+                        <div data-value="DK-LS-1-84-DALI-2">DK-LS-1-84-DALI-2</div>
+                        <div data-value="DK-LS-1-84-А">DK-LS-1-84-А</div>
+                        <div data-value="DK-LS-1-84-DALI-2-А">DK-LS-1-84-DALI-2-А</div>
+                        <div data-value="DK-LS-1-96">DK-LS-1-96</div>
+                        <div data-value="DK-LS-1-96-DALI-2">DK-LS-1-96-DALI-2</div>
+                        <div data-value="DK-LS-1-96-А">DK-LS-1-96-А</div>
+                        <div data-value="DK-LS-1-96-DALI-2-А">DK-LS-1-96-DALI-2-А</div>
+                        <div data-value="DK-LS-1-116">DK-LS-1-116</div>
+                        <div data-value="DK-LS-1-116-DALI-2">DK-LS-1-116-DALI-2</div>
+                        <div data-value="DK-LS-1-116-А">DK-LS-1-116-А</div>
+                        <div data-value="DK-LS-1-116-DALI-2-А">DK-LS-1-116-DALI-2-А</div>
+                        <div data-value="DK-LS-1-130">DK-LS-1-130</div>
+                        <div data-value="DK-LS-1-130-DALI-2">DK-LS-1-130-DALI-2</div>
+                        <div data-value="DK-LS-1-130-А">DK-LS-1-130-А</div>
+                        <div data-value="DK-LS-1-130-DALI-2-А">DK-LS-1-130-DALI-2-А</div>
+                        <div data-value="DK-LS-1-174">DK-LS-1-174</div>
+                        <div data-value="DK-LS-1-174-DALI-2">DK-LS-1-174-DALI-2</div>
+                        <div data-value="DK-LS-1-174-А">DK-LS-1-174-А</div>
+                        <div data-value="DK-LS-1-174-DALI-2-А">DK-LS-1-174-DALI-2-А</div>
+                        <div data-value="DK-LS-1-195">DK-LS-1-195</div>
+                        <div data-value="DK-LS-1-195-DALI-2">DK-LS-1-195-DALI-2</div>
+                        <div data-value="DK-LS-1-195-А">DK-LS-1-195-А</div>
+                        <div data-value="DK-LS-1-195-DALI-2-А">DK-LS-1-195-DALI-2-А</div>
+                        <div data-value="DK-LS-1-260">DK-LS-1-260</div>
+                        <div data-value="DK-LS-1-260-DALI-2">DK-LS-1-260-DALI-2</div>
+                        <div data-value="DK-LS-1-260-А">DK-LS-1-260-А</div>
+                        <div data-value="DK-LS-1-260-DALI-2-А">DK-LS-1-260-DALI-2-А</div>
+                        <div data-value="DK-LS-1-390">DK-LS-1-390</div>
+                        <div data-value="DK-LS-1-390-DALI-2">DK-LS-1-390-DALI-2</div>
+                        <div data-value="DK-LS-1-390-А">DK-LS-1-390-А</div>
+                        <div data-value="DK-LS-1-390-DALI-2-А">DK-LS-1-390-DALI-2-А</div>
+                        <div data-value="DK-LS-1-520">DK-LS-1-520</div>
+                        <div data-value="DK-LS-1-520-DALI-2">DK-LS-1-520-DALI-2</div>
+                        <div data-value="DK-LS-1-520-А">DK-LS-1-520-А</div>
+                        <div data-value="DK-LS-1-520-DALI-2-А">DK-LS-1-520-DALI-2-А</div>
+                        <div data-value="DK-LS-1-650">DK-LS-1-650</div>
+                        <div data-value="DK-LS-1-650-DALI-2">DK-LS-1-650-DALI-2</div>
+                        <div data-value="DK-LS-1-650-А">DK-LS-1-650-А</div>
+                        <div data-value="DK-LS-1-650-DALI-2-А">DK-LS-1-650-DALI-2-А</div>
+                        <div data-value="DK-LS-1-780">DK-LS-1-780</div>
+                        <div data-value="DK-LS-1-780-DALI-2">DK-LS-1-780-DALI-2</div>
+                        <div data-value="DK-LS-1-780-А">DK-LS-1-780-А</div>
+                        <div data-value="DK-LS-1-780-DALI-2-А">DK-LS-1-780-DALI-2-А</div>
+                        <div data-value="DK-LS-1-910">DK-LS-1-910</div>
+                        <div data-value="DK-LS-1-910-DALI-2">DK-LS-1-910-DALI-2</div>
+                        <div data-value="DK-LS-1-910-А">DK-LS-1-910-А</div>
+                        <div data-value="DK-LS-1-910-DALI-2-А">DK-LS-1-910-DALI-2-А</div>
+                    </div>
+                    <select id="model-select" class="select-dropdown" style="display:none;">
+                        <option value="DK-LS-1-58">DK-LS-1-58</option>
+                        <option value="DK-LS-1-58-DALI-2">DK-LS-1-58-DALI-2</option>
+                        <option value="DK-LS-1-58-А">DK-LS-1-58-А</option>
+                        <option value="DK-LS-1-58-DALI-2-А">DK-LS-1-58-DALI-2-А</option>
+                        <option value="DK-LS-1-42">DK-LS-1-42</option>
+                        <option value="DK-LS-1-42-DALI-2">DK-LS-1-42-DALI-2</option>
+                        <option value="DK-LS-1-42-А">DK-LS-1-42-А</option>
+                        <option value="DK-LS-1-42-DALI-2-А">DK-LS-1-42-DALI-2-А</option>
+                        <option value="DK-LS-1-65">DK-LS-1-65</option>
+                        <option value="DK-LS-1-65-DALI-2">DK-LS-1-65-DALI-2</option>
+                        <option value="DK-LS-1-65-А">DK-LS-1-65-А</option>
+                        <option value="DK-LS-1-65-DALI-2-А">DK-LS-1-65-DALI-2-А</option>
+                        <option value="DK-LS-1-84">DK-LS-1-84</option>
+                        <option value="DK-LS-1-84-DALI-2">DK-LS-1-84-DALI-2</option>
+                        <option value="DK-LS-1-84-А">DK-LS-1-84-А</option>
+                        <option value="DK-LS-1-84-DALI-2-А">DK-LS-1-84-DALI-2-А</option>
+                        <option value="DK-LS-1-96">DK-LS-1-96</option>
+                        <option value="DK-LS-1-96-DALI-2">DK-LS-1-96-DALI-2</option>
+                        <option value="DK-LS-1-96-А">DK-LS-1-96-А</option>
+                        <option value="DK-LS-1-96-DALI-2-А">DK-LS-1-96-DALI-2-А</option>
+                        <option value="DK-LS-1-116">DK-LS-1-116</option>
+                        <option value="DK-LS-1-116-DALI-2">DK-LS-1-116-DALI-2</option>
+                        <option value="DK-LS-1-116-А">DK-LS-1-116-А</option>
+                        <option value="DK-LS-1-116-DALI-2-А">DK-LS-1-116-DALI-2-А</option>
+                        <option value="DK-LS-1-130">DK-LS-1-130</option>
+                        <option value="DK-LS-1-130-DALI-2">DK-LS-1-130-DALI-2</option>
+                        <option value="DK-LS-1-130-А">DK-LS-1-130-А</option>
+                        <option value="DK-LS-1-130-DALI-2-А">DK-LS-1-130-DALI-2-А</option>
+                        <option value="DK-LS-1-174">DK-LS-1-174</option>
+                        <option value="DK-LS-1-174-DALI-2">DK-LS-1-174-DALI-2</option>
+                        <option value="DK-LS-1-174-А">DK-LS-1-174-А</option>
+                        <option value="DK-LS-1-174-DALI-2-А">DK-LS-1-174-DALI-2-А</option>
+                        <option value="DK-LS-1-195">DK-LS-1-195</option>
+                        <option value="DK-LS-1-195-DALI-2">DK-LS-1-195-DALI-2</option>
+                        <option value="DK-LS-1-195-А">DK-LS-1-195-А</option>
+                        <option value="DK-LS-1-195-DALI-2-А">DK-LS-1-195-DALI-2-А</option>
+                        <option value="DK-LS-1-260">DK-LS-1-260</option>
+                        <option value="DK-LS-1-260-DALI-2">DK-LS-1-260-DALI-2</option>
+                        <option value="DK-LS-1-260-А">DK-LS-1-260-А</option>
+                        <option value="DK-LS-1-260-DALI-2-А">DK-LS-1-260-DALI-2-А</option>
+                        <option value="DK-LS-1-390">DK-LS-1-390</option>
+                        <option value="DK-LS-1-390-DALI-2">DK-LS-1-390-DALI-2</option>
+                        <option value="DK-LS-1-390-А">DK-LS-1-390-А</option>
+                        <option value="DK-LS-1-390-DALI-2-А">DK-LS-1-390-DALI-2-А</option>
+                        <option value="DK-LS-1-520">DK-LS-1-520</option>
+                        <option value="DK-LS-1-520-DALI-2">DK-LS-1-520-DALI-2</option>
+                        <option value="DK-LS-1-520-А">DK-LS-1-520-А</option>
+                        <option value="DK-LS-1-520-DALI-2-А">DK-LS-1-520-DALI-2-А</option>
+                        <option value="DK-LS-1-650">DK-LS-1-650</option>
+                        <option value="DK-LS-1-650-DALI-2">DK-LS-1-650-DALI-2</option>
+                        <option value="DK-LS-1-650-А">DK-LS-1-650-А</option>
+                        <option value="DK-LS-1-650-DALI-2-А">DK-LS-1-650-DALI-2-А</option>
+                        <option value="DK-LS-1-780">DK-LS-1-780</option>
+                        <option value="DK-LS-1-780-DALI-2">DK-LS-1-780-DALI-2</option>
+                        <option value="DK-LS-1-780-А">DK-LS-1-780-А</option>
+                        <option value="DK-LS-1-780-DALI-2-А">DK-LS-1-780-DALI-2-А</option>
+                        <option value="DK-LS-1-910">DK-LS-1-910</option>
+                        <option value="DK-LS-1-910-DALI-2">DK-LS-1-910-DALI-2</option>
+                        <option value="DK-LS-1-910-А">DK-LS-1-910-А</option>
+                        <option value="DK-LS-1-910-DALI-2-А">DK-LS-1-910-DALI-2-А</option>
+                    </select>
+                    <div id="model-details" class="model-details"></div>
+                </div>
                 <br><br>
-                <label for="mount-select" class="select-label">Выберите вид крепления:</label>
-                <select id="mount-select" class="select-dropdown">
-                    <option value="Регулируемый кронштейн">РЕГУЛИРУЕМЫЙ КРОНШТЕЙН</option>
-                    <option value="Консоль на трубу до 57 мм">КОНСОЛЬ НА ТРУБУ ДО 57 ММ</option>
-                    <option value="Универсальный">УНИВЕРСАЛЬНЫЙ</option>
-                    <option value="Под заказ (по чертежу)">ПОД ЗАКАЗ (ПО ЧЕРТЕЖУ)</option>
-                </select>
-                <div id="mount-details" class="mount-details"></div>
-                <a href="#moreDesc" class="wrapper__desc-link"><strong>Больше описание...</strong></a>
-                <br><br>    
-                <label for="kss-select" class="select-label">Выберите тип КСС:</label>
-                <select id="kss-select" class="select-dropdown">
-                    <option value="К12°">К12°</option>
-                    <option value="К15°">К15°</option>
-                    <option value="K25°">K25°</option>
-                    <option value="Г30°">Г30°</option>
-                    <option value="Г60°">Г60°</option>
-                    <option value="М60°х60°">М60°х60°</option>
-                    <option value="Г90°">Г90°</option>
-                    <option value="Д110°">Д110°</option>
-                    <option value="Д120°">Д120°</option>
-                    <option value="М150°">М150°</option>
-                    <option value="Ш148x58°">Ш148x58°</option>
-                    <option value="Ш156x59°">Ш156x59°</option>
-                    <option value="Ш160x115°">Ш160x115°</option>
-                </select>
-                <div id="kss-details" class="kss-details"></div>
+                <div class="custom-select">
+                    <label for="mount-select" class="select-label">Выберите вид крепления:</label>
+                    <select id="mount-select" class="select-dropdown">
+                        <option value="Регулируемый кронштейн" class="select-dropdown-option">РЕГУЛИРУЕМЫЙ КРОНШТЕЙН</option>
+                        <option value="Консоль на трубу до 57 мм" class="select-dropdown-option">КОНСОЛЬ НА ТРУБУ ДО 57 ММ</option>
+                        <option value="Универсальный" class="select-dropdown-option">УНИВЕРСАЛЬНЫЙ</option>
+                        <option value="Под заказ (по чертежу)" class="select-dropdown-option">ПОД ЗАКАЗ (ПО ЧЕРТЕЖУ)</option>
+                    </select>
+                    <div id="mount-details" class="mount-details"></div>
+                </div>
+                <br><br>
+                <div class="custom-select">
+                    <label for="kss-select" class="select-label">Выберите тип КСС:</label>
+                    <select id="kss-select" class="select-dropdown">
+                        <option value="К12°">К12°</option>
+                        <option value="К15°">К15°</option>
+                        <option value="K25°">K25°</option>
+                        <option value="Г30°">Г30°</option>
+                        <option value="Г60°">Г60°</option>
+                        <option value="М60°х60°">М60°х60°</option>
+                        <option value="Г90°">Г90°</option>
+                        <option value="Д110°">Д110°</option>
+                        <option value="Д120°">Д120°</option>
+                        <option value="М150°">М150°</option>
+                        <option value="Ш148x58°">Ш148x58°</option>
+                        <option value="Ш156x59°">Ш156x59°</option>
+                        <option value="Ш160x115°">Ш160x115°</option>
+                    </select>
+                    <div id="kss-details" class="kss-details"></div>
+                </div>
                 <button class="wrapper__desc-btn">Заказать</button>
             </div>
             <h1 class="title" id="moreDesc">Характеристики светильника</h1>
@@ -198,18 +321,19 @@
                 </svg>
             </button>
             <h2>Оформление</h2>
-    
+
             <form action="#!" class="form">
                 <input type="text" placeholder="Имя" id="name" class="form__input" required>
-                <input type="tel" id="message" name="message" class="form__number" placeholder="Номер телефона: +X" required>
+                <input type="tel" id="message" name="message" class="form__number" placeholder="Номер телефона: +X"
+                    required>
                 <button class="form__btn" onclick="sendMail()">Отправить</button>
             </form>
-            
+
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     <script src="products.js"></script>
 </body>
 
