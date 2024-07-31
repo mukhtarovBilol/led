@@ -709,3 +709,11 @@ img {
         font-size: 20px;
     }
 }
+
+.category__wrapper .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
