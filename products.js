@@ -67,6 +67,7 @@ document.getElementById('kss-select').addEventListener('change', function() {
 });
 
 const headerLink = document.querySelector(".wrapper__desc-btn")
+const headerLink2 = document.querySelector(".wrapper__desc-btn2")
 
 headerLink.addEventListener("click", function () {
     document.getElementById("my-modal").classList.add("open")
@@ -94,8 +95,98 @@ document.getElementById("my-modal")?.addEventListener('click', event => {
     event.currentTarget.classList.remove('open');
 });
 
-const formBtn = document.querySelector(".form__btn")
-formBtn?.addEventListener("click", function(event){
-    event.preventDefault(); // Предотвращаем отправку формы на сервер
-    console.log("Форма не отправлена");
+headerLink2.addEventListener("click", function () {
+    document.getElementById("my-modal2").classList.add("open")
+})
+
+// Закрыть модальное окно
+document.getElementById("close-my-modal-btn2")?.addEventListener("click", function () {
+    document.getElementById("my-modal2").classList.remove("open")
+})
+
+// Закрыть модальное окно при нажатии на Esc
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("my-modal2").classList.remove("open")
+    }
 });
+
+// Закрыть модальное окно при клике вне его
+document.querySelector("#my-modal2 .modal__box2")?.addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+    
+document.getElementById("my-modal2")?.addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('open');
+});
+
+// 
+document.getElementById('decoding__content-1').addEventListener('mouseover', function() {
+    document.getElementById('span_0').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-1').addEventListener('mouseout', function() {
+    document.getElementById('span_0').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-2').addEventListener('mouseover', function() {
+    document.getElementById('span_2').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-2').addEventListener('mouseout', function() {
+    document.getElementById('span_2').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-3').addEventListener('mouseover', function() {
+    document.getElementById('span_3').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-3').addEventListener('mouseout', function() {
+    document.getElementById('span_3').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-4').addEventListener('mouseover', function() {
+    document.getElementById('span_5').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-4').addEventListener('mouseout', function() {
+    document.getElementById('span_5').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-5').addEventListener('mouseover', function() {
+    document.getElementById('span_6').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-5').addEventListener('mouseout', function() {
+    document.getElementById('span_6').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-6').addEventListener('mouseover', function() {
+    document.getElementById('span_1').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-6').addEventListener('mouseout', function() {
+    document.getElementById('span_1').style.backgroundColor = '#ccc';
+});
+// 
+
+// 
+document.getElementById('decoding__content-7').addEventListener('mouseover', function() {
+    document.getElementById('span_4').style.backgroundColor = 'lightcoral';
+});
+
+document.getElementById('decoding__content-7').addEventListener('mouseout', function() {
+    document.getElementById('span_4').style.backgroundColor = '#ccc';
+});
+// 

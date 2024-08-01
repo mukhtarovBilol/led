@@ -1,4 +1,5 @@
-.modal {
+.modal,
+.modal2 {
     position: fixed;
     left: 0;
     top: 0;
@@ -15,7 +16,8 @@
     transition: opacity .4s, visibility .4s;
 }
 
-.modal__box {
+.modal__box,
+.modal__box2 {
     position: relative;
     width: 500px;
     padding: 45px;
@@ -27,7 +29,12 @@
     transition: transform .8s;
 }
 
-.modal__close-btn {
+.modal__box2 {
+    width: 800px;
+}
+
+.modal__close-btn,
+.modal__close-btn2 {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -49,12 +56,29 @@
     fill: rgb(186, 53, 0);
 }
 
-.modal.open {
+.modal__close-btn2 svg path {
+    transition: fill .4s;
+}
+
+.modal__close-btn2:hover svg path {
+    fill: blue;
+}
+
+.modal__close-btn2:active svg path {
+    fill: rgb(186, 53, 0);
+}
+
+.modal.open,
+.modal2.open {
     visibility: visible;
     opacity: 1;
 }
 
 .modal.open .modal__box {
+    transform: scale(1);
+}
+
+.modal2.open .modal__box2 {
     transform: scale(1);
 }
 

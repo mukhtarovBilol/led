@@ -376,7 +376,8 @@ img {
     transition: 1s;
 }
 
-.wrapper__desc-btn {
+.wrapper__desc-btn,
+.wrapper__desc-btn2 {
     display: inline-block;
     text-align: center;
     max-width: 250px;
@@ -391,7 +392,8 @@ img {
     transition: 0.4s;
 }
 
-.wrapper__desc-btn:hover {
+.wrapper__desc-btn:hover,
+.wrapper__desc-btn2:hover {
     background: #f44336;
 }
 
@@ -725,4 +727,57 @@ img {
     flex-wrap: wrap;
     gap: 20px;
     padding: 30px 0;
+}
+
+.decoding-header {
+    background: #ccc;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.decoding-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.decoding__content {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 15px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.decoding__content-6,
+.decoding__content-7 {
+    width: 100%;
+}
+
+.decoding__content h4 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.decoding__content ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.decoding__content:hover {
+    background-color: #e6f7ff;
 }
