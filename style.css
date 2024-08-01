@@ -710,10 +710,19 @@ img {
     }
 }
 
-.category__wrapper .container {
+.category__wrapper {
+    padding: 50px 0;
+}
+
+.category__title {
+    margin-bottom: 30px;
+}
+
+.category__products {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 30px 0;
 }
