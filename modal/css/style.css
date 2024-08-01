@@ -30,7 +30,8 @@
 }
 
 .modal__box2 {
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .modal__close-btn,
@@ -123,14 +124,16 @@
 }
 
 @media (max-width: 576px) {
-    .modal__box {
+    .modal__box,
+    .modal__box2 {
         max-width: 325px;
         width: 100%;
     }
 }
 
 @media (max-width:360px) {
-    .modal__box {
+    .modal__box,
+    .modal__box2 {
         max-width: 295px;
         width: 100%;
     }

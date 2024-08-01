@@ -51,15 +51,9 @@ img {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 30px 0;
+    padding: 20px;
     background: #000;
-}
-
-.header__nav-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    position: relative;
 }
 
 .header__nav-logo {
@@ -67,7 +61,7 @@ img {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-    font-size: clamp(25px, 5vw, 30px);
+    font-size: clamp(20px, 5vw, 30px);
 }
 
 .header__nav-logo span {
@@ -76,11 +70,18 @@ img {
     font-weight: 400;
 }
 
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .header__nav-list-item-link {
     display: inline-block;
     position: relative;
     padding: 10px 0;
     color: #fff;
+    text-decoration: none;
 }
 
 .header__nav-list-item-link::after {
@@ -106,11 +107,70 @@ img {
     background-color: #e31f25;
     border-radius: 5px;
     text-align: center;
-    transition: 0.2s;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
 .header__nav-button:hover {
     background-color: #f44336;
+}
+
+.header__nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.header__nav-burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header__nav-burger.active .header__nav-burger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.header__nav-burger.active .header__nav-burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header__nav-burger.active .header__nav-burger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+}
+
+.header__nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Адаптивные стили */
+@media (max-width: 900px) {
+    .header__nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 20px;
+        background: #000;
+    }
+
+    .header__nav-list.active {
+        display: flex;
+    }
+
+    .header__nav-burger {
+        display: flex;
+    }
 }
 
 /* header content */
@@ -119,18 +179,21 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
 }
 
+/* Заголовок */
 .header__content-title {
     color: #fff;
-    font-size: clamp(35px, 5vw, 40px);
+    font-size: clamp(30px, 5vw, 40px);
     margin-bottom: 15px;
     max-width: 800px;
     width: 100%;
 }
 
-
+/* Описание */
 .header__content-txt {
     color: #fff;
     max-width: 650px;
@@ -138,10 +201,11 @@ img {
     margin-bottom: 30px;
 }
 
+/* Кнопки */
 .header__content-btns {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 
 .header__content-modal {
@@ -152,10 +216,9 @@ img {
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
-    border: 1px solid #e31f25;
-    border: unset;
+    border: none;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 .header__content-modal:hover {
@@ -173,18 +236,69 @@ img {
     cursor: pointer;
     border: 1px solid #fff;
     text-align: center;
-    transition: 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .header__content-btn:hover {
     box-shadow: 0 0 5px #fff;
 }
 
+/* Изображение */
 .header__content-image {
     border-radius: 50%;
     max-width: 550px;
     width: 100%;
     object-fit: cover;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+    .header__content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__content-title {
+        font-size: clamp(25px, 5vw, 35px);
+        margin-bottom: 10px;
+    }
+
+    .header__content-txt {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header__content-btns {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__content-title {
+        font-size: clamp(20px, 5vw, 30px);
+        margin-bottom: 10px;
+    }
+
+    .header__content-txt {
+        margin-bottom: 15px;
+    }
+
+    .header__content-btns {
+        flex-direction: column;
+    }
+
+    .header__content-modal,
+    .header__content-btn {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
 }
 
 /* header */
@@ -395,6 +509,10 @@ img {
 .wrapper__desc-btn:hover,
 .wrapper__desc-btn2:hover {
     background: #f44336;
+}
+
+.wrapper__desc h1 {
+    font-size: clamp(20px, 5vw, 32px);
 }
 
 .swiper-container {
@@ -737,12 +855,16 @@ img {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .decoding-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .decoding__content {
@@ -768,8 +890,14 @@ img {
 }
 
 .decoding__content h4 {
-    font-size: 1.2em;
+    font-size: clamp(14px, 3vw, 25px);
     color: #333;
+}
+
+.decoding__content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .decoding__content ul li {
@@ -780,4 +908,54 @@ img {
 
 .decoding__content:hover {
     background-color: #e6f7ff;
+}
+
+.modal2__desc {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 1200px) {
+    .decoding__content {
+        width: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+    .decoding__content {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .decoding-header {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .decoding__content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .decoding__content ul li {
+        font-size: 0.8em;
+    }
+
+    .modal2__desc {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .decoding__content {
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    .decoding-header {
+    }
 }

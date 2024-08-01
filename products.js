@@ -190,3 +190,4 @@ document.getElementById('decoding__content-7').addEventListener('mouseout', func
     document.getElementById('span_4').style.backgroundColor = '#ccc';
 });
 // 
+
