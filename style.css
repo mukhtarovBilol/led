@@ -348,6 +348,21 @@ img {
     object-fit: contain;
 }
 
+.products__more-link {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: #f44336;
+    padding: 10px 20px;
+    border-radius: 13px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.products__more-link:hover {
+    background: #e31f25;
+}
+
 .dropdown {
     position: relative;
     margin-top: 10px;
@@ -522,12 +537,12 @@ img {
 }
 
 .mySwiper2 {
-    width: 700px;
+    width: 600px;
     height: 500px;
 }
 
 .mySwiper {
-    width: 700px;
+    width: 600px;
     height: 100px;
     margin-top: 10px;
     box-sizing: border-box;
@@ -958,4 +973,18 @@ img {
 
     .decoding-header {
     }
+}
+
+/*  */
+
+.allProducts__title {
+    font-size: clamp(30px, 5vw, 38px);
+    padding: 30px 0;
+}
+
+.allProducts__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
