@@ -1,5 +1,4 @@
-var myForm = document.getElementById("required__form");
-
+var myForm = document.getElementById("myForm");
 
 myForm?.addEventListener("submit", function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение формы
@@ -18,13 +17,14 @@ myForm?.addEventListener("submit", function(event) {
     })
     .then(function(data) {
         alert('Данные успешно отправлены');
-        closeModal(); // Закрываем модальное окно после успешной отправки
     })
     .catch(function(error) {
         console.error('Произошла ошибка:', error);
         alert('Произошла ошибка при отправке данных');
     });
 });
+
+
 
 document.getElementById('burger').addEventListener('click', function() {
     const navList = document.querySelector('.header__nav-list');

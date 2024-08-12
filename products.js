@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.getElementById('mount-select').addEventListener('change', function() {
+document?.getElementById('mount-select')?.addEventListener('change', function() {
     const selectedMount = this.value;
     const mountDetails = document.getElementById('mount-details');
     mountDetails.textContent = `Вы выбрали вид крепления: ${selectedMount}`;
 });
 
-document.getElementById('kss-select').addEventListener('change', function() {
+document?.getElementById('kss-select')?.addEventListener('change', function() {
     const selectedKss = this.value;
     const kssDetails = document.getElementById('kss-details');
     kssDetails.textContent = `Вы выбрали тип КСС: ${selectedKss}`;
@@ -77,6 +77,10 @@ headerLink.addEventListener("click", function () {
 document.getElementById("close-my-modal-btn")?.addEventListener("click", function () {
     document.getElementById("my-modal").classList.remove("open")
 })
+
+function closeModal() {
+    document.getElementById("my-modal").classList.remove("open")
+}
 
 // Закрыть модальное окно при нажатии на Esc
 window.addEventListener('keydown', (e) => {
@@ -191,3 +195,37 @@ document.getElementById('decoding__content-7').addEventListener('mouseout', func
 });
 // 
 
+// const wrapperDesc = document.querySelector('.wrapper__desc');
+// const h1Element = wrapperDesc.querySelector('h1');
+
+// var myForm2 = document.getElementById("myForm2");
+// var formData = new FormData(myForm2);
+// formData += h1Element.innerText
+// console.log(formData);
+
+var myForm2 = document.getElementById("myForm2");
+
+myForm2?.addEventListener("submit2", function(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+    var formData = new FormData(myForm2);
+
+    fetch('../main.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(function(response) {
+        if (!response.ok) {
+            throw new Error('Ошибка ' + response.status);
+        }
+        return response.text();
+    })
+    .then(function(data) {
+        alert('Данные успешно отправлены');
+        closeModal(); 
+    })
+    .catch(function(error) {
+        console.error('Произошла ошибка:', error);
+        alert('Произошла ошибка при отправке данных');
+    });
+});
